@@ -1,6 +1,5 @@
 export default async function fetchCustomers() {
-  console.log("process.env.API_ENDPOINT: ",process.env.API_ENDPOINT);
-  const res = await fetch(process.env.API_ENDPOINT + "/allcustomers", {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + "/allcustomers", {
     cache: "no-cache",
   });
   if (!res.ok) {
